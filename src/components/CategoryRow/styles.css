@@ -1,0 +1,46 @@
+.categoryRow--wrapper {
+    position: absolute;
+    background-color: #222;
+    display: flex;
+    width: 340px;
+    height: auto;
+    grid-gap: 20px;
+    z-index: 999;
+    right: 4px;
+    padding: 24px;
+    top: 71px;
+    border-radius: 4px;
+}
+
+.categoryRow--wrapperitem {
+    position: absolute;
+    background-color: #222;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+    grid-gap: 16px;
+    z-index: 999;
+    right: 4px;
+    padding: 8px;
+    top: 71px;
+    border-radius: 4px;
+}
+
+input[type=checkbox] {
+  -moz-transform: scale(2); 
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  padding: 10px;
+  margin: 8px;
+}
+
+.categoryRow--titlewrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.categoryRow--close {
+    cursor: pointer;
+}
