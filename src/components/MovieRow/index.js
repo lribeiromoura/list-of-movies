@@ -24,7 +24,6 @@ export default function MovieRow({title, items}) {
             x = (window.innerWidth - listw) - 60;
         }
         setScrollX(x);
-
     }
 
     const openModalMovie = async (movie) => {
@@ -32,7 +31,6 @@ export default function MovieRow({title, items}) {
         setModalSelectedMovie(movie);
         document.body.style.overflow = "hidden";
         let movieInfo = await Tmdb.getMovieInfo(movie.id);
-        console.log(movieInfo);
     }
 
     const closeModalMovie = () => {

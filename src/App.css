@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-button {
+  width: 70px;
+  height: 40px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
