@@ -5,37 +5,16 @@ import Tmdb from '../../Tmdb';
 
 export default function MovieRow({title, items}) {
 
-    const [scrollX, setScrollX] = useState(0);
     const [modalVisible, setModalVisible] = useState(false);
-    const [modalSelectedMovie, setModalSelectedMovie] = useState(null)
-
-    const handleLeftArrow = () => {
-        let x = scrollX + Math.round(window.innerWidth/2);
-        if(x > 0) {
-            x = 0;
-        }
-        setScrollX(x);
-    }
-
-    const handleRightArrow = () => {
-        let x = scrollX - Math.round(window.innerWidth / 2);
-        let listw = items.results.length * 150;
-        if((window.innerWidth - listw) > x) {
-            x = (window.innerWidth - listw) - 60;
-        }
-        setScrollX(x);
-    }
+    const [modalSelectedMovie, setModalSelectedMovie] = useState(null);
 
     const openModalMovie = async (movie) => {
         setModalVisible(true);
         setModalSelectedMovie(movie);
-        document.body.style.overflow = "hidden";
-        let movieInfo = await Tmdb.getMovieInfo(movie.id);
     }
 
     const closeModalMovie = () => {
         setModalVisible(false);
-        document.body.style.overflow = "visible";
     }
 
     return (

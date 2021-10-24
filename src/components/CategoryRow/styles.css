@@ -2,6 +2,7 @@
     position: absolute;
     background-color: #222;
     display: flex;
+    flex-direction: column;
     width: 340px;
     height: auto;
     grid-gap: 20px;
@@ -13,8 +14,7 @@
 }
 
 .categoryRow--wrapperitem {
-    position: absolute;
-    background-color: #222;
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: auto;
@@ -22,7 +22,6 @@
     z-index: 999;
     right: 4px;
     padding: 8px;
-    top: 71px;
     border-radius: 4px;
 }
 
